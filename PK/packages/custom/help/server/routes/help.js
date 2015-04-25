@@ -2,26 +2,26 @@
 
 /* jshint -W098 */
 // The Package is past automatically as first parameter
-module.exports = function(Help, app, auth, database) {
 
-  app.get('/help/example/anyone', function(req, res, next) {
-    res.send('Anyone can access this');
-  });
 
-  app.get('/help/example/auth', auth.requiresLogin, function(req, res, next) {
-    res.send('Only authenticated users can access this');
-  });
+var controller= require('../controllers/user_info.js');
+var controller1= require('../controllers/maps.js');
+//var controller_geography=require('../controllers/geogarphy-server-controller.js');
+//var controller_usersonline=require('../controllers/users-online.js');
+//var controller_trending=require('../controllers/trending-product.js');
+//var controller_same_product=require('../controllers/same-product.js');
+module.exports = function(Analytics, app, auth, database) {
 
-  app.get('/help/example/admin', auth.requiresAdmin, function(req, res, next) {
-    res.send('Only users with Admin role can access this');
-  });
+  app.get('/housing/user_info', auth.requiresLogin,controller.user_entry);
+  app.get('/housing/map', auth.requiresLogin,controller1.map_info);
 
-  app.get('/help/example/render', function(req, res, next) {
-    Help.render('index', {
-      package: 'help'
-    }, function(err, html) {
-      //Rendering a view from the Package server/views
-      res.send(html);
-    });
-  });
+//  app.get('/acme/api/', auth.requiresLogin,controller.insert_one);
+//
+//  app.get('/acme/geography/', auth.requiresLogin,controller_geography.geography);
+//
+//  app.get('/acme/online/', auth.requiresLogin,controller_usersonline.users_online);
+//
+//  app.get('/acme/trending_products/', auth.requiresLogin,controller_trending.trending_product);
+//
+//  app.get('/acme/same_products/', auth.requiresLogin,controller_same_product.same_product);
 };

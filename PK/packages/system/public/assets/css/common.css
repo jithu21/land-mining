@@ -1,3 +1,22 @@
+.angular-google-map-container { height: 400px; }
+
+
+
+#form {
+
+  margin-left: 100px;
+  width: 500px
+}
+
+.indent {
+
+  margin-left: 50px;
+}
+
+.move-down {
+  margin-top: 100px;
+}
+
 .page-header {
     padding-bottom: 0 !important;
     margin: 0 !important;

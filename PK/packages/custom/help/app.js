@@ -25,6 +25,11 @@ Help.register(function(app, auth, database) {
   });
   
   Help.aggregateAsset('css', 'help.css');
+  Help.aggregateAsset('css', 'AdminLTE.css');
+  Help.aggregateAsset('css', 'AdminLTE.min.css');
+  Help.aggregateAsset('css', 'bootstrap.css');
+  Help.aggregateAsset('css', 'bootstrap.min.css');
+  Help.aggregateAsset('css', 'bootstrap.css.map');
 
   /**
     //Uncomment to use. Requires meanio@0.3.7 or above
