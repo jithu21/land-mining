@@ -1,3 +1,19 @@
 .help-example h1 {
   background-color: purple
 }
+
+
+
+.wrapper {
+  border: 1px dashed #95a5a6;
+  height: 150px;
+  margin-top: 16px;
+  border-radius: 4px;
+  position: relative;
+  font-size: 12px;
+}
+
+.wrapper p {
+  line-height: 31px;
+  text-align: center;
+}

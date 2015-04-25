@@ -3,8 +3,8 @@
 angular.module('mean.help').config(['$stateProvider',
   function($stateProvider) {
     $stateProvider.state('help example page', {
-      url: '/help/example',
-      templateUrl: 'help/views/index.html'
+      url: '/help/housing',
+      templateUrl: 'help/views/hview.html'
     });
   }
 ]);
