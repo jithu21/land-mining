@@ -1,7 +1,8 @@
 
 <section class="content" ng-controller="UserController" ng-show="global.authenticated">
 
-<div class="col-lg-offset-3 col-md-6">
+
+  <div class="col-lg-offset-3 col-md-6">
   <h3>User Preferences </h3>
   <!-- general form elements -->
   <div class="box box-primary">
@@ -40,9 +41,27 @@
           <input id="bach" type="radio" name="content" ng-model="content" value="bach">
 
           <div class="wrapper">
-            <p ng-show="content == 'commercial'">This is the Commercial</p>
-            <p ng-show="content == 'family'">This is the other Faim!</p>
-            <p ng-show="content == 'bach'">This is the other Bch!</p>
+            <p ng-show="content == 'commercial'">
+              <label ng-repeat="role in commercial">
+                <input type="checkbox" checklist-model="commercial_user.roles" checklist-value="role.text"> {{role.text}}
+              </label>
+              <br>
+              <button  ng-click="checkAll()" class="btn btn-success">Check all</button>
+            </p>
+            <p ng-show="content == 'family'">
+              <label ng-repeat="role in family">
+                <input type="checkbox" checklist-model="family_user.roles" checklist-value="role.text"> {{role.text}}
+              </label>
+              <br>
+              <button  ng-click="check()" class="btn btn-success">Check all</button>
+            </p>
+            <p ng-show="content == 'bach'">
+              <label ng-repeat="role in bachelor">
+                <input type="checkbox" checklist-model="bachelor_user.roles" checklist-value="role.text"> {{role.text}}
+              </label>
+              <br>
+              <button  ng-click="check_bach()" class="btn btn-success">Check all</button>
+            </p>
           </div>
 
         </div>
