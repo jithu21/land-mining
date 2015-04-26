@@ -21,7 +21,8 @@
         "bower_components/lodash/dist/lodash.min.js",
         "bower_components/angular-google-maps/dist/angular-google-maps.min.js",
         "bower_components/ngAutocomplete/src/ngAutocomplete.js",
-        "bower_components/angular-busy/dist/angular-busy.js"
+        "bower_components/angular-busy/dist/angular-busy.js",
+        "bower_components/checklist-model/checklist-model.js"
       ]
     },
     "fonts":{

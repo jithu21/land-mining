@@ -14,6 +14,7 @@
     "font-awesome": "~4.3.0",
     "angular-google-maps": "~2.0.19",
     "ngAutocomplete": "~1.0.0",
-    "angular-busy": "~4.1.3"
+    "angular-busy": "~4.1.3",
+    "checklist-model": "~0.2.4"
   }
 }
